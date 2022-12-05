@@ -1,14 +1,10 @@
 
 const express = require('express');
-
+const router  = require('./routes/apiRoute')
 const app = express();
 
-app.get('/api',(req,res)=>{
-    res.status(200).json({
-        message: 'hello world'
-    })
-})
+app.use('/api',router)
 
 
 
-export default app
+module.exports=app
